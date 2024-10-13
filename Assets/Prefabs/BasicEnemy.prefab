@@ -179,12 +179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba20fd3dc9fe5c428e7b33544313526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 7
+  health: 3
   moveSpeed: 10
   shootForce: 15
   reloadTime: 0.5
   friction: 0.15
-  bullet: {fileID: 0}
+  bullet: {fileID: -4804582644883514130, guid: 51694d094a8e73f4aa6c2e99e036ffc2, type: 3}
   opponentTag: Player
   chaseDist: 10
   roamDist: 20

@@ -38,7 +38,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.tag == target)
         {
-            other.GetComponent<Ship>().TakeDamage();
+            other.GetComponent<Ship>().TakeDamage(1);
             Destroy(this.gameObject);
         }
     }

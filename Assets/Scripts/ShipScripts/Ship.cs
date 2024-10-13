@@ -70,9 +70,9 @@ public abstract class Ship : MonoBehaviour
     }
 
     // Method for taking damage
-    public void TakeDamage()
+    public virtual void TakeDamage(int damage)
     {
-        health = health - 1;
+        health -= damage;
         if (health <= 0)
         {
             Destroy(gameObject);

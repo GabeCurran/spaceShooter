@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemyShip : Ship
 {
@@ -97,5 +98,14 @@ public class EnemyShip : Ship
     {
         targetPosition = (Vector2)transform.position
             + new Vector2(Random.Range(-roamDist, roamDist), Random.Range(-roamDist, roamDist));
+    }
+
+    public override void TakeDamage(int damage) {
+        health -= damage;
+        if (health <= 0) {
+            Destroy(gameObject);
+            // Add score when enemy is destroyed
+            ScoreController.AddScore(1);
+        } 
     }
 }
