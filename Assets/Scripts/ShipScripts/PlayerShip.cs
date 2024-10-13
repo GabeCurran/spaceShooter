@@ -7,6 +7,7 @@ public class PlayerShip : Ship
 
     // Add the animator variable
     public Animator animator;
+    public GameManager gameManager;
 
     void Awake()
     {
@@ -61,5 +62,13 @@ public class PlayerShip : Ship
         mousePos.z = Camera.main.nearClipPlane;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
         return new Vector2(worldPos.x, worldPos.y);
+    }
+
+    public override void TakeDamage(int damage) {
+        health -= damage;
+        if (health <= 0) {
+            Destroy(gameObject);
+            gameManager.GameOver(false);
+        }
     }
 }

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5014051775542692195}
   - component: {fileID: 1702674227744716153}
   - component: {fileID: 1042739099258774930}
-  - component: {fileID: 4282119125313264321}
   - component: {fileID: 7812617654519074871}
+  - component: {fileID: 7917680359096213966}
   m_Layer: 0
   m_Name: BossEnemy
   m_TagString: Enemy
@@ -167,7 +167,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4282119125313264321
+--- !u!114 &7812617654519074871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,7 +176,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1414359583329798638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba20fd3dc9fe5c428e7b33544313526, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fb98b1b79eb83849b452d679a11f662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7917680359096213966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414359583329798638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c8684d737f7c04a8d725220a619f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
@@ -191,15 +203,5 @@ MonoBehaviour:
   shootDist: 20
   roamSpeed: 0
   chaseSpeed: 0
---- !u!114 &7812617654519074871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414359583329798638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fb98b1b79eb83849b452d679a11f662, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  circleRadius: 5
+  circleSpeed: 15

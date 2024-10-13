@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -9,20 +7,18 @@ public class ScoreController : MonoBehaviour
     public int score;
     public TextMeshProUGUI scoreText;
 
-    void Start()
+    void Awake()
     {
-        // Initialize the singleton instance
+        // Ensure only one instance of the ScoreController exists
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);  // Optional: keep the ScoreController across scenes
         }
         else
         {
-            Destroy(gameObject); // Prevent duplicate ScoreControllers
+            Destroy(gameObject);  // Destroy duplicate instances
         }
-
-        // Initialize the score display
-        UpdateScoreText();
     }
 
     public static void AddScore(int amount)

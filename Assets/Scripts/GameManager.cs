@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject enemyPrefab;  // Reference to the enemy prefab
+    public GameObject bossPrefab;   // Reference to the boss prefab
 
     void Start()
     {
@@ -14,7 +16,11 @@ public class GameManager : MonoBehaviour
     public void SpawnEnemy()
     {
         Vector3 randomPosition = GetRandomSpawnPosition();
-        Instantiate(enemyPrefab, randomPosition, Quaternion.identity);
+        if (ScoreController.Instance.score == 500) {
+            Instantiate(bossPrefab, randomPosition, Quaternion.identity);
+        } else {
+            Instantiate(enemyPrefab, randomPosition, Quaternion.identity);
+        }
     }
 
     // Get a random spawn position within the camera's view boundaries
@@ -29,5 +35,13 @@ public class GameManager : MonoBehaviour
         float randomY = Random.Range(-mapHeight / 2, mapHeight / 2);
 
         return new Vector3(randomX, randomY, 0);  // z=0 for 2D games
+    }
+
+    public void GameOver(bool playerWon) {
+        if (playerWon) {
+            Debug.Log("You win!");
+        } else {
+            Debug.Log("Game over!");
+        }
     }
 }
