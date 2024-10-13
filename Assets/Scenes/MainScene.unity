@@ -177,7 +177,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.16862746, g: 0.16862746, b: 0.16862746, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -670,6 +670,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1579418647}
+    - target: {fileID: 223231438905242024, guid: a485c566d448ac3429b02adff455c017, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 145506148}
     - target: {fileID: 8672332399649679562, guid: a485c566d448ac3429b02adff455c017, type: 3}
       propertyPath: m_Name
       value: Player

@@ -67,7 +67,7 @@ public class PlayerShip : Ship
     public override void TakeDamage(int damage) {
         health -= damage;
         if (health <= 0) {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             gameManager.GameOver(false);
         }
     }

@@ -13,7 +13,7 @@ public class ScoreController : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);  // Optional: keep the ScoreController across scenes
+            // DontDestroyOnLoad(gameObject);  // Optional: keep the ScoreController across scenes
         }
         else
         {
