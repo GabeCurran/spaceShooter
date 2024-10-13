@@ -4,6 +4,12 @@ public class GameManager : MonoBehaviour
 {
     public GameObject enemyPrefab;  // Reference to the enemy prefab
 
+    void Start()
+    {
+        // Spawn an initial enemy when the game starts
+        SpawnEnemy();
+    }
+
     // Spawns a new enemy at a random position
     public void SpawnEnemy()
     {
