@@ -162,13 +162,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f94a83fd297624591016fb8632beaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 10
   moveSpeed: 17
   shootForce: 25
   reloadTime: 0.35
   friction: 0.1
   bullet: {fileID: 5980261459078795939, guid: f32e506ae81e3b34e90bc32f52293151, type: 3}
   opponentTag: Enemy
+  animator: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &3490014232604669041
 MonoBehaviour:
   m_ObjectHideFlags: 0
