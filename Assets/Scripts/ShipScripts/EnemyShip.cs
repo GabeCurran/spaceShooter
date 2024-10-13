@@ -100,12 +100,23 @@ public class EnemyShip : Ship
             + new Vector2(Random.Range(-roamDist, roamDist), Random.Range(-roamDist, roamDist));
     }
 
-    public override void TakeDamage(int damage) {
+    public override void TakeDamage(int damage)
+    {
         health -= damage;
-        if (health <= 0) {
-            Destroy(gameObject);
+        if (health <= 0)
+        {
             // Add score when enemy is destroyed
-            ScoreController.AddScore(1);
-        } 
+            ScoreController.AddScore(100);
+
+            // Find the GameManager and spawn a new enemy
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            if (gameManager != null)
+            {
+                gameManager.SpawnEnemy();  // Spawn a new enemy
+            }
+
+            Destroy(gameObject);  // Destroy the current enemy
+        }
     }
+
 }
